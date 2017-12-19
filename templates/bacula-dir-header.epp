@@ -15,6 +15,9 @@ Director {                # define myself
 <% if $bacula::director::tls_dh_file != undef { %>
     TLS DH File             = <%= $bacula::director::tls_dh_file %>
 <% } -%>
+<% if $bacula::heartbeat_interval != undef { -%>
+    Heartbeat Interval      = <%= $bacula::heartbeat_interval %>
+<% } -%>
 }
 
 # Generic catalog service

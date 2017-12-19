@@ -52,6 +52,7 @@ class bacula (
   Optional[String]        $tls_ca_certificate_file = undef,
   Optional[String]        $tls_ca_certificate_dir  = undef,
   Optional[String]        $tls_dh_file             = undef,
+  Optional[Integer]       $heartbeat_interval      = undef,
   Optional[String]        $job_tag                 = undef,
 ){
 }

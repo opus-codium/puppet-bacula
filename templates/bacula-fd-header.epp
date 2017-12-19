@@ -23,4 +23,7 @@ FileDaemon {
     Maximum Concurrent Jobs = <%= $bacula::client::max_concurrent_jobs %>
 <%= epp('bacula/_tls_client.epp') -%>
 <%= epp('bacula/_pki.epp') -%>
+<% if $bacula::heartbeat_interval != undef { -%>
+    Heartbeat Interval      = <%= $bacula::heartbeat_interval %>
+<% } -%>
 }

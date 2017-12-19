@@ -8,4 +8,7 @@ Storage {
     }
 <% } -%>
 <%= epp('bacula/_tls_server.epp') -%>
+<% if $bacula::heartbeat_interval != undef { -%>
+    Heartbeat Interval      = <%= $bacula::heartbeat_interval %>
+<% } -%>
 }
